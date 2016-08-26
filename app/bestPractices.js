@@ -8,19 +8,31 @@ exports = typeof window === 'undefined' ? global : window;
  */
 
 exports.bestPracticesAnswers = {
-  globals: function() {
-    myObject = {
-      name: 'Jory'
-    };
+    globals: function() {
+        var myObject = {
+            name: 'Jory'
+        };
 
-    return myObject;
-  },
+        return myObject;
+    },
 
-  parseInt: function(num) {
-    return parseInt(num);
-  },
+    parseInt: function(num) {
+        //oh no, misunderstood. Change my code after checking answers
 
-  identity: function(val1, val2) {
+        // var result = '';
+        // var i = 0;
+        // while(!isNaN(num.charAt(i)) && i < num.length) {
+        //     result = result + num.charAt(i);
+        //     i++;
+        // }
+        // return +result;
 
-  }
+        return(parseInt(num, 10));
+    },
+
+    identity: function(val1, val2) {
+        return val1 === val2;
+    }
 };
+
+exports.bestPracticesAnswers.parseInt('012');
